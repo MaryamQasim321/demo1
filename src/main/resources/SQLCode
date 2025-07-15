@@ -1,0 +1,91 @@
+create database retailSystem
+use retailSystem
+
+create table Products(
+productId int PRIMARY KEY,
+name varchar(50) not null,
+price DECIMAL(10, 2) not null,
+stock int NOT NULL
+
+)
+
+
+create table Customers(
+customerId int PRIMARY KEY,
+name varchar(50),
+contact varchar(50),
+email varchar(50)
+)
+
+
+create table Orders (
+orderId int PRIMARY KEY,
+customerId int,
+ orderDate DATETIME DEFAULT CURRENT_TIMESTAMP,
+totalCost DECIMAL(10, 2),
+foreign key (customerId) references Customers(customerId)
+
+)
+
+create table OrderProduct(
+orderId int,
+productId int,
+quantity INT NOT NULL,
+PRIMARY KEY (orderId, productId),
+foreign key (productId ) references Products(productId ),
+foreign key (orderId) references orders(orderId)
+)
+
+
+
+
+
+
+INSERT INTO Products (productId, name, price, stock) VALUES
+(201, 'Sufi Cooking Oil (5L)', 2750.00, 40),
+(202, 'Shan Masala Pack (50g)', 120.00, 100),
+(203, 'Tapal Danedar Tea (500g)', 480.00, 50),
+(204, 'Nestlé Milk Pack (1L)', 260.00, 80),
+(205, 'National Basmati Rice (5kg)', 1450.00, 30),
+(206, 'Tetra Pak Juice (1L)', 180.00, 60),
+(207, 'Lays Chips Family Pack', 250.00, 100),
+(208, 'Everyday Milk Powder (400g)', 490.00, 45),
+(209, 'Dettol Hand Wash (200ml)', 190.00, 70),
+(210, 'Colgate Toothpaste (100ml)', 150.00, 90);
+INSERT INTO Customers (customerId, name, contact, email) VALUES
+(11, 'Imran Siddiqui', '03112345678', 'imran.s@gmail.com'),
+(12, 'Sarah Jameel', '03219876543', 'sarah.jameel@hotmail.com'),
+(13, 'Usman Tariq', '03451239876', 'usman.t@gmail.com');
+INSERT INTO Orders (orderId, customerId, orderDate, totalCost) VALUES
+(3001, 11, NOW(), 1390.00),
+(3002, 12, NOW(), 2030.00),
+(3003, 13, NOW(), 3490.00);
+
+-- Order 3001 - Imran bought Milk, Tea, and Masala
+INSERT INTO OrderProduct (orderId, productId, quantity) VALUES (3001, 204, 2);  -- Milk Pack
+INSERT INTO OrderProduct (orderId, productId, quantity) VALUES (3001, 202, 3);  -- Shan Masala
+INSERT INTO OrderProduct (orderId, productId, quantity) VALUES (3001, 203, 1);  -- Tea
+
+-- Order 3002 - Sarah bought Oil, Rice, and Dettol
+INSERT INTO OrderProduct (orderId, productId, quantity) VALUES (3002, 201, 1);  -- Sufi Oil
+INSERT INTO OrderProduct (orderId, productId, quantity) VALUES (3002, 205, 1);  -- Rice
+INSERT INTO OrderProduct (orderId, productId, quantity) VALUES (3002, 209, 2);  -- Dettol
+
+-- Order 3003 - Usman bought Juice, Chips, and Everyday
+INSERT INTO OrderProduct (orderId, productId, quantity) VALUES (3003, 206, 2);  -- Juice
+INSERT INTO OrderProduct (orderId, productId, quantity) VALUES (3003, 207, 1);  -- Chips
+INSERT INTO OrderProduct (orderId, productId, quantity) VALUES (3003, 208, 3);  -- Everyday Milk Powder
+
+
+CREATE TABLE admin (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    username VARCHAR(50) NOT NULL UNIQUE,
+    password VARCHAR(255) NOT NULL,
+    role VARCHAR(20) NOT NULL
+);
+
+
+INSERT INTO admin (username, password, role)
+VALUES 
+('admin1', 'admin123', 'ADMIN'),
+('staff1', 'staff123', 'STAFF');
