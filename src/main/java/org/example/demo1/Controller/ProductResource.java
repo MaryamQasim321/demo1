@@ -1,4 +1,8 @@
-package org.example.demo1;
+package org.example.demo1.Controller;
+
+import org.example.demo1.Repository.DAOFactory;
+import org.example.demo1.Repository.ProductDAO;
+import org.example.demo1.model.Product;
 
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
@@ -8,8 +12,14 @@ import java.util.List;
 @Path("/products")
 @Produces(MediaType.APPLICATION_JSON)
 @Consumes(MediaType.APPLICATION_JSON)
-public class ProductAPIs {
+public class ProductResource {
     private final ProductDAO productDAO = DAOFactory.getProductDAO();
+
+
+
+    public ProductResource() {
+        System.out.println("ProductResource initialized!");
+    }
 
 
     //apis:
