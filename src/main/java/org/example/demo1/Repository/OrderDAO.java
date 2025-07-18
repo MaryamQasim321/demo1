@@ -15,7 +15,7 @@ public class OrderDAO {
         //2. get order by id
         public static final String VIEW_ORDER_BY_ID_QUERY="SELECT * FROM orders where orderId=?";
         //3. add order
-        public static final String ADD_ORDER_QUERY="INSERT INTO orders(customerId, totalCost) values (?, ?)";
+        public static final String ADD_ORDER_QUERY="INSERT INTO orders(orderId, customerId, totalCost) values (?, ?, ?)";
     public static final String GET_PRODUCT_PRICE_QUERY="SELECT price FROM products where productId=?";
     public static final String INSERT_INTO_ORDERPRODUCT_QUERY="INSERT into orderProduct(orderId, productId, quantity) values (?,?,?) ";
 
@@ -63,8 +63,9 @@ public class OrderDAO {
     }
 
 
+    // Update query to explicitly include orderId
 
-    public void createOrder(OrderRequest request) {
+    public void createOrder(int orderId, OrderRequest request) {
         BigDecimal totalPrice = BigDecimal.ZERO;
 
         try (Connection conn = DatabaseConnectorService.getInstance().getConnection()) {
@@ -76,21 +77,12 @@ public class OrderDAO {
                 totalPrice = totalPrice.add(itemTotal);
             }
 
-            // Insert into orders table
-            int orderId;
-            try (PreparedStatement stmt = conn.prepareStatement(ADD_ORDER_QUERY, Statement.RETURN_GENERATED_KEYS)) {
-                stmt.setInt(1, request.getCustomerId());
-                stmt.setBigDecimal(2, totalPrice);
+            // Insert into orders table with provided orderId
+            try (PreparedStatement stmt = conn.prepareStatement(ADD_ORDER_QUERY)) {
+                stmt.setInt(1, orderId); // manually provided
+                stmt.setInt(2, request.getCustomerId());
+                stmt.setBigDecimal(3, totalPrice);
                 stmt.executeUpdate();
-
-                try (ResultSet rs = stmt.getGeneratedKeys()) {
-                    if (rs.next()) {
-                        orderId = rs.getInt(1);
-                    } else {
-                        conn.rollback();
-                        throw new SQLException("Failed to get orderId.");
-                    }
-                }
             }
 
             // Insert into orderProduct table
@@ -112,6 +104,7 @@ public class OrderDAO {
     }
 
 
+
     //helper method to get product price
     private BigDecimal getProductPrice(int productId, Connection conn) throws SQLException {
         try (PreparedStatement stmt = conn.prepareStatement(GET_PRODUCT_PRICE_QUERY)) {
@@ -123,6 +116,30 @@ public class OrderDAO {
                     throw new SQLException("Product with ID " + productId + " not found.");
                 }
             }
+        }
+    }
+
+
+    // Add this in OrderDAO.java
+    public void deleteOrderById(int orderId) {
+        try (Connection conn = DatabaseConnectorService.getInstance().getConnection()) {
+            conn.setAutoCommit(false);
+
+            // Delete from orderProduct first (foreign key dependency)
+            try (PreparedStatement deleteOrderProduct = conn.prepareStatement("DELETE FROM orderProduct WHERE orderId = ?")) {
+                deleteOrderProduct.setInt(1, orderId);
+                deleteOrderProduct.executeUpdate();
+            }
+
+            // Delete from orders
+            try (PreparedStatement deleteOrder = conn.prepareStatement("DELETE FROM orders WHERE orderId = ?")) {
+                deleteOrder.setInt(1, orderId);
+                deleteOrder.executeUpdate();
+            }
+
+            conn.commit();
+        } catch (SQLException e) {
+            throw new RuntimeException("Failed to delete order: " + e.getMessage(), e);
         }
     }
 

@@ -35,7 +35,7 @@ public class DatabaseConnectorService {
         config.setJdbcUrl("jdbc:mysql://localhost:3306/retailSystem");
         config.setUsername("root"); // or your DB user
         config.setPassword("BSCSBatch2027"); // your DB password
-        config.setDriverClassName("com.mysql.cj.jdbc.Driver"); // ✅ VERY IMPORTANT
+        config.setDriverClassName("com.mysql.cj.jdbc.Driver");
 
         config.setMaximumPoolSize(5);
         config.setMinimumIdle(1);

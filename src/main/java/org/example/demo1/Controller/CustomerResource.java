@@ -1,9 +1,7 @@
 package org.example.demo1.Controller;
-
 import org.example.demo1.Repository.DAOFactory;
 import org.example.demo1.Repository.CustomerDAO;
 import org.example.demo1.model.Customer;
-
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
