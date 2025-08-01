@@ -1,5 +1,4 @@
 package org.example.demo1.model;
-
 public class Customer {
     private int customerId;
     private String name;

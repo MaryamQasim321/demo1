@@ -4,9 +4,17 @@ import java.util.List;
 
 public class OrderRequest {
 
+    private int orderId;
     private int customerId;
     private List<ProductOrder> products;
 
+    public int getOrderId() {
+        return orderId;
+    }
+
+    public void setOrderId(int orderId) {
+        this.orderId = orderId;
+    }
 
     public int getCustomerId() {
         return customerId;

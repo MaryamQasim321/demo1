@@ -1,9 +1,12 @@
 package org.example.demo1.Tests;
-import org.example.demo1.Repository.CustomerDAO;
+
+import org.example.demo1.repository.CustomerDAO;
 import org.example.demo1.model.Customer;
 import org.junit.jupiter.api.*;
+
 import java.sql.SQLException;
 import java.util.List;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)

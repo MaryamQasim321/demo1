@@ -1,6 +1,6 @@
 package org.example.demo1.Tests;
 
-import org.example.demo1.Repository.ProductDAO;
+import org.example.demo1.repository.ProductDAO;
 import org.example.demo1.model.Product;
 import org.junit.jupiter.api.*;
 
