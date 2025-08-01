@@ -1,9 +1,11 @@
 package org.example.demo1.Tests;
-import org.example.demo1.Repository.OrderDAO;
+
+import org.example.demo1.repository.OrderDAO;
 import org.example.demo1.model.Order;
 import org.example.demo1.model.OrderRequest;
 import org.example.demo1.model.ProductOrder;
 import org.junit.jupiter.api.*;
+
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
@@ -18,10 +20,12 @@ public class OrderResourceTests {
     private static int createdOrderId;
 
     private static final int TEST_ORDER_ID = 5000;
+
     @BeforeAll
     public static void setup() {
         orderDAO = new OrderDAO();
     }
+
     @Test
     @org.junit.jupiter.api.Order(1)
     public void testCreateOrder() {
@@ -54,6 +58,7 @@ public class OrderResourceTests {
         // ✅ Now create the order
         assertDoesNotThrow(() -> orderDAO.createOrder(TEST_ORDER_ID, request), "Order creation failed");
     }
+
     @Test
     @org.junit.jupiter.api.Order(2)
     public void testGetAllOrders() throws SQLException {

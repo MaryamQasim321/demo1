@@ -3,10 +3,9 @@ package org.example.demo1.model;
 public class Admin {
 
 
-
-        private int id;
-        private String username;
-        private String password; // should be hashed!
+    private int id;
+    private String username;
+    private String password; // should be hashed!
 
     public int getId() {
         return id;
@@ -33,5 +32,5 @@ public class Admin {
     }
 
     // Getters and Setters
-    }
+}
 

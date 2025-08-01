@@ -1,0 +1,116 @@
+2025-07-31 13:35:18.955 [main] INFO  o.e.demo1.repository.CustomerDAO - {"status": "info", "message": "[CustomerDAO] Creating customer: id=101, name=Test User"}
+2025-07-31 13:35:18.986 [main] INFO  o.e.demo1.repository.CustomerDAO - {"status": "info", "message": "[CustomerDAO] Fetching customer with ID: 101"}
+2025-07-31 13:35:18.989 [main] INFO  o.e.demo1.repository.CustomerDAO - {"status": "info", "message": "[CustomerDAO] Updating customer: id=101"}
+2025-07-31 13:35:18.994 [main] INFO  o.e.demo1.repository.CustomerDAO - {"status": "info", "message": "[CustomerDAO] Fetching all customers"}
+2025-07-31 13:35:18.999 [main] INFO  o.e.demo1.repository.CustomerDAO - {"status": "info", "message": "[CustomerDAO] Deleting customer: id=101"}
+2025-07-31 13:35:19.016 [main] INFO  o.example.demo1.repository.OrderDAO - [OrderDAO] Deleting order: orderId=5000
+2025-07-31 13:35:19.019 [main] INFO  o.example.demo1.repository.OrderDAO - [OrderDAO] Creating order: orderId=5000, customerId=11
+2025-07-31 13:35:19.023 [main] INFO  o.example.demo1.repository.OrderDAO - [OrderDAO] Fetching all orders
+2025-07-31 13:35:19.027 [main] INFO  o.example.demo1.repository.OrderDAO - [OrderDAO] Fetching order with ID: 0
+2025-07-31 13:35:19.056 [main] ERROR o.e.demo1.repository.ProductDAO - {"status": "error", "message": "[ProductDAO] Failed to fetch product with ID: 109", "exception": "One or more database environment variables are missing."}
+2025-07-31 13:46:53.047 [main] INFO  o.e.demo1.repository.CustomerDAO - {"status": "info", "message": "[CustomerDAO] Creating customer: id=101, name=Test User"}
+2025-07-31 13:46:53.082 [main] INFO  o.e.demo1.repository.CustomerDAO - {"status": "info", "message": "[CustomerDAO] Fetching customer with ID: 101"}
+2025-07-31 13:46:53.088 [main] INFO  o.e.demo1.repository.CustomerDAO - {"status": "info", "message": "[CustomerDAO] Updating customer: id=101"}
+2025-07-31 13:46:53.093 [main] INFO  o.e.demo1.repository.CustomerDAO - {"status": "info", "message": "[CustomerDAO] Fetching all customers"}
+2025-07-31 13:46:53.098 [main] INFO  o.e.demo1.repository.CustomerDAO - {"status": "info", "message": "[CustomerDAO] Deleting customer: id=101"}
+2025-07-31 13:46:53.115 [main] INFO  o.example.demo1.repository.OrderDAO - [OrderDAO] Deleting order: orderId=5000
+2025-07-31 13:46:53.118 [main] INFO  o.example.demo1.repository.OrderDAO - [OrderDAO] Creating order: orderId=5000, customerId=11
+2025-07-31 13:46:53.125 [main] INFO  o.example.demo1.repository.OrderDAO - [OrderDAO] Fetching all orders
+2025-07-31 13:46:53.128 [main] INFO  o.example.demo1.repository.OrderDAO - [OrderDAO] Fetching order with ID: 0
+2025-07-31 13:46:53.149 [main] ERROR o.e.demo1.repository.ProductDAO - {"status": "error", "message": "[ProductDAO] Failed to fetch product with ID: 109", "exception": "One or more database environment variables are missing."}
+2025-07-31 13:51:24.963 [main] INFO  o.e.demo1.repository.CustomerDAO - {"status": "info", "message": "[CustomerDAO] Creating customer: id=101, name=Test User"}
+2025-07-31 13:51:25.000 [main] INFO  o.e.demo1.repository.CustomerDAO - {"status": "info", "message": "[CustomerDAO] Fetching customer with ID: 101"}
+2025-07-31 13:51:25.006 [main] INFO  o.e.demo1.repository.CustomerDAO - {"status": "info", "message": "[CustomerDAO] Updating customer: id=101"}
+2025-07-31 13:51:25.011 [main] INFO  o.e.demo1.repository.CustomerDAO - {"status": "info", "message": "[CustomerDAO] Fetching all customers"}
+2025-07-31 13:51:25.016 [main] INFO  o.e.demo1.repository.CustomerDAO - {"status": "info", "message": "[CustomerDAO] Deleting customer: id=101"}
+2025-07-31 13:51:25.040 [main] INFO  o.example.demo1.repository.OrderDAO - [OrderDAO] Deleting order: orderId=5000
+2025-07-31 13:51:25.044 [main] INFO  o.example.demo1.repository.OrderDAO - [OrderDAO] Creating order: orderId=5000, customerId=11
+2025-07-31 13:51:25.051 [main] INFO  o.example.demo1.repository.OrderDAO - [OrderDAO] Fetching all orders
+2025-07-31 13:51:25.054 [main] INFO  o.example.demo1.repository.OrderDAO - [OrderDAO] Fetching order with ID: 0
+2025-07-31 13:51:25.082 [main] ERROR o.e.demo1.repository.ProductDAO - {"status": "error", "message": "[ProductDAO] Failed to fetch product with ID: 109", "exception": "One or more database environment variables are missing."}
+2025-07-31 13:59:58.802 [main] INFO  o.e.demo1.repository.CustomerDAO - {"status": "info", "message": "[CustomerDAO] Creating customer: id=101, name=Test User"}
+2025-07-31 13:59:58.839 [main] INFO  o.e.demo1.repository.CustomerDAO - {"status": "info", "message": "[CustomerDAO] Fetching customer with ID: 101"}
+2025-07-31 13:59:58.845 [main] INFO  o.e.demo1.repository.CustomerDAO - {"status": "info", "message": "[CustomerDAO] Updating customer: id=101"}
+2025-07-31 13:59:58.849 [main] INFO  o.e.demo1.repository.CustomerDAO - {"status": "info", "message": "[CustomerDAO] Fetching all customers"}
+2025-07-31 13:59:58.853 [main] INFO  o.e.demo1.repository.CustomerDAO - {"status": "info", "message": "[CustomerDAO] Deleting customer: id=101"}
+2025-07-31 13:59:58.870 [main] INFO  o.example.demo1.repository.OrderDAO - [OrderDAO] Deleting order: orderId=5000
+2025-07-31 13:59:58.874 [main] INFO  o.example.demo1.repository.OrderDAO - [OrderDAO] Creating order: orderId=5000, customerId=11
+2025-07-31 13:59:58.880 [main] INFO  o.example.demo1.repository.OrderDAO - [OrderDAO] Fetching all orders
+2025-07-31 13:59:58.883 [main] INFO  o.example.demo1.repository.OrderDAO - [OrderDAO] Fetching order with ID: 0
+2025-07-31 13:59:58.908 [main] ERROR o.e.demo1.repository.ProductDAO - {"status": "error", "message": "[ProductDAO] Failed to fetch product with ID: 109", "exception": "One or more database environment variables are missing."}
+2025-07-31 14:07:44.948 [main] INFO  org.example.demo1.LogTest - ✅ This is a test log to both console and file
+2025-07-31 14:17:41.855 [http-nio-8080-exec-6] INFO  o.e.d.r.NotificationsResource - Received request to send notification. To: alisha@example.com, Message: Your order is confirmed
+2025-07-31 14:17:41.887 [http-nio-8080-exec-6] INFO  o.e.d.services.NotificationService - Attempting to send notification to 'alisha@example.com'
+2025-07-31 14:17:43.815 [http-nio-8080-exec-6] INFO  o.e.d.services.NotificationService - Notification sent successfully to 'alisha@example.com'
+2025-07-31 14:17:43.836 [http-nio-8080-exec-6] INFO  o.e.d.r.NotificationsResource - Notification sent successfully. Result: Notification sent to alisha@example.com
+2025-07-31 14:17:55.115 [http-nio-8080-exec-7] INFO  o.e.d.r.NotificationsResource - Received request to send notification. To: alisha@example.com, Message: Your order is confirmed
+2025-07-31 14:17:55.115 [http-nio-8080-exec-7] INFO  o.e.d.services.NotificationService - Attempting to send notification to 'alisha@example.com'
+2025-07-31 14:17:56.650 [http-nio-8080-exec-7] WARN  o.e.d.services.NotificationService - Simulated failure for user alisha@example.com
+2025-07-31 14:18:01.652 [http-nio-8080-exec-7] INFO  o.e.d.services.NotificationService - Attempting to send notification to 'alisha@example.com'
+2025-07-31 14:18:03.522 [http-nio-8080-exec-7] INFO  o.e.d.services.NotificationService - Notification sent successfully to 'alisha@example.com'
+2025-07-31 14:18:03.523 [http-nio-8080-exec-7] INFO  o.e.d.r.NotificationsResource - Notification sent successfully. Result: Notification sent to alisha@example.com
+2025-07-31 14:18:15.484 [http-nio-8080-exec-10] INFO  o.e.d.r.NotificationsResource - Received request to send notification. To: alisha@example.com, Message: Your order is confirmed
+2025-07-31 14:18:15.485 [http-nio-8080-exec-10] INFO  o.e.d.services.NotificationService - Attempting to send notification to 'alisha@example.com'
+2025-07-31 14:18:17.257 [http-nio-8080-exec-10] WARN  o.e.d.services.NotificationService - Simulated failure for user alisha@example.com
+2025-07-31 14:18:22.265 [http-nio-8080-exec-10] INFO  o.e.d.services.NotificationService - Attempting to send notification to 'alisha@example.com'
+2025-07-31 14:18:23.455 [http-nio-8080-exec-10] WARN  o.e.d.services.NotificationService - Simulated failure for user alisha@example.com
+2025-07-31 14:18:28.458 [http-nio-8080-exec-10] INFO  o.e.d.services.NotificationService - Attempting to send notification to 'alisha@example.com'
+2025-07-31 14:18:29.753 [http-nio-8080-exec-10] WARN  o.e.d.services.NotificationService - Simulated failure for user alisha@example.com
+2025-07-31 14:18:29.776 [http-nio-8080-exec-10] WARN  o.e.d.services.NotificationService - Notification sending failed, attempting fallback
+java.lang.RuntimeException: Simulated external service failure
+	at org.example.demo1.services.NotificationService.simulateExternalNotification(NotificationService.java:88)
+	at org.example.demo1.services.NotificationService.lambda$sendNotifications$2(NotificationService.java:57)
+	at io.github.resilience4j.retry.Retry.lambda$decorateSupplier$5(Retry.java:301)
+	at io.github.resilience4j.circuitbreaker.CircuitBreaker.lambda$decorateSupplier$5(CircuitBreaker.java:194)
+	at io.vavr.control.Try.of(Try.java:74)
+	at io.vavr.control.Try.ofSupplier(Try.java:91)
+	at org.example.demo1.services.NotificationService.sendNotifications(NotificationService.java:60)
+	at org.example.demo1.resources.NotificationsResource.send(NotificationsResource.java:31)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.glassfish.jersey.server.model.internal.ResourceMethodInvocationHandlerFactory.lambda$static$0(ResourceMethodInvocationHandlerFactory.java:52)
+	at org.glassfish.jersey.server.model.internal.AbstractJavaResourceMethodDispatcher$1.run(AbstractJavaResourceMethodDispatcher.java:124)
+	at org.glassfish.jersey.server.model.internal.AbstractJavaResourceMethodDispatcher.invoke(AbstractJavaResourceMethodDispatcher.java:167)
+	at org.glassfish.jersey.server.model.internal.JavaResourceMethodDispatcherProvider$ResponseOutInvoker.doDispatch(JavaResourceMethodDispatcherProvider.java:176)
+	at org.glassfish.jersey.server.model.internal.AbstractJavaResourceMethodDispatcher.dispatch(AbstractJavaResourceMethodDispatcher.java:79)
+	at org.glassfish.jersey.server.model.ResourceMethodInvoker.invoke(ResourceMethodInvoker.java:475)
+	at org.glassfish.jersey.server.model.ResourceMethodInvoker.apply(ResourceMethodInvoker.java:397)
+	at org.glassfish.jersey.server.model.ResourceMethodInvoker.apply(ResourceMethodInvoker.java:81)
+	at org.glassfish.jersey.server.ServerRuntime$1.run(ServerRuntime.java:255)
+	at org.glassfish.jersey.internal.Errors$1.call(Errors.java:248)
+	at org.glassfish.jersey.internal.Errors$1.call(Errors.java:244)
+	at org.glassfish.jersey.internal.Errors.process(Errors.java:292)
+	at org.glassfish.jersey.internal.Errors.process(Errors.java:274)
+	at org.glassfish.jersey.internal.Errors.process(Errors.java:244)
+	at org.glassfish.jersey.process.internal.RequestScope.runInScope(RequestScope.java:265)
+	at org.glassfish.jersey.server.ServerRuntime.process(ServerRuntime.java:234)
+	at org.glassfish.jersey.server.ApplicationHandler.handle(ApplicationHandler.java:684)
+	at org.glassfish.jersey.servlet.WebComponent.serviceImpl(WebComponent.java:394)
+	at org.glassfish.jersey.servlet.WebComponent.service(WebComponent.java:346)
+	at org.glassfish.jersey.servlet.ServletContainer.service(ServletContainer.java:366)
+	at org.glassfish.jersey.servlet.ServletContainer.service(ServletContainer.java:319)
+	at org.glassfish.jersey.servlet.ServletContainer.service(ServletContainer.java:205)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:209)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:670)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:928)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1794)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:1570)
+2025-07-31 14:18:29.781 [http-nio-8080-exec-10] WARN  o.e.d.services.NotificationService - Fallback triggered for user: alisha@example.com due to Simulated external service failure
+2025-07-31 14:18:29.781 [http-nio-8080-exec-10] INFO  o.e.d.r.NotificationsResource - Notification sent successfully. Result: Notification failed. Fallback executed for user alisha@example.com

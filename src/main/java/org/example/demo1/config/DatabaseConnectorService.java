@@ -1,5 +1,7 @@
-package org.example.demo1.Config;
+package org.example.demo1.config;
 
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
 import com.zaxxer.hikari.HikariConfig;
 import com.zaxxer.hikari.HikariDataSource;
 
@@ -31,10 +33,31 @@ public class DatabaseConnectorService {
     }
 
     private void configureDataSource() {
+        // 1. Load from environment variables
+        String jdbcUrl = System.getenv("DB_URL");
+        String username = System.getenv("DB_USER");
+        String password = System.getenv("DB_PASSWORD");
+
+        if (jdbcUrl == null || username == null || password == null) {
+            throw new IllegalStateException("One or more database environment variables are missing.");
+        }
+
+        // 2. Create DatabaseConfig object
+        DatabaseConfig dbConfig = new DatabaseConfig(jdbcUrl, username, password);
+
+        // 3. Serialize (marshal) config object to JSON
+        Gson gson = new GsonBuilder().setPrettyPrinting().create();
+        String json = gson.toJson(dbConfig);
+        System.out.println("Serialized DB Config:\n" + json);
+
+        // 4. Deserialize (unmarshal) JSON string back into an object
+        DatabaseConfig deserializedConfig = gson.fromJson(json, DatabaseConfig.class);
+
+        // 5. Use deserialized object to configure Hikari
         HikariConfig config = new HikariConfig();
-        config.setJdbcUrl("jdbc:mysql://localhost:3306/retailSystem");
-        config.setUsername("root"); // or your DB user
-        config.setPassword("BSCSBatch2027"); // your DB password
+        config.setJdbcUrl(deserializedConfig.getJdbcUrl());
+        config.setUsername(deserializedConfig.getUsername());
+        config.setPassword(deserializedConfig.getPassword());
         config.setDriverClassName("com.mysql.cj.jdbc.Driver");
 
         config.setMaximumPoolSize(5);
